@@ -13,6 +13,7 @@ namespace NetCoreFundamentos
             this.txtNombre.Text = "Soy un texto completamente nuevo!!!";
             this.txtNombre.Width = 210;
             this.txtNombre.BackColor = Color.GreenYellow;
+            
         }
     }
 }

@@ -41,7 +41,6 @@
             btnPulsar.TabIndex = 0;
             btnPulsar.Text = "Pulsar";
             btnPulsar.UseVisualStyleBackColor = true;
-            btnPulsar.Click += btnPulsar_Click;
             // 
             // lblNombre
             // 
