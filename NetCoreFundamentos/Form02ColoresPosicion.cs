@@ -27,7 +27,7 @@ namespace NetCoreFundamentos
             int red = int.Parse(this.txtRed.Text);
             int green = int.Parse(this.txtGreen.Text);
             int blue = int.Parse(this.txtBlue.Text);
-            BackColor = Color.FromArgb(red, green, blue);
+            this.BackColor = Color.FromArgb(red, green, blue);
         }
     }
 }
