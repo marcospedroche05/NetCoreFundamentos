@@ -38,7 +38,7 @@
             // 
             // btnSumar
             // 
-            btnSumar.Location = new Point(213, 92);
+            btnSumar.Location = new Point(202, 92);
             btnSumar.Name = "btnSumar";
             btnSumar.Size = new Size(138, 42);
             btnSumar.TabIndex = 0;
@@ -91,7 +91,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(408, 263);
+            ClientSize = new Size(386, 245);
             Controls.Add(txtNum2);
             Controls.Add(txtNum1);
             Controls.Add(lblResultado);
