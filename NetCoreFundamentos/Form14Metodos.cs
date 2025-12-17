@@ -16,9 +16,9 @@ namespace NetCoreFundamentos
         }
 
         //RECIBIMOS UN WRAPPER POR VALOR
-        void GetDobleValor(int numero)
+        int GetDobleValor(int numero)
         {
-            numero *= 2;
+             return numero *= 2;
         }
         void CambiarColor(Button boton)
         {
@@ -32,8 +32,8 @@ namespace NetCoreFundamentos
         private void btnValor_Click(object sender, EventArgs e)
         {
             int num = int.Parse(this.txtNumero.Text);
-            this.GetDobleValor(num);
-            this.lblResultado.Text = num.ToString();
+            int resultado = this.GetDobleValor(num);
+            this.lblResultado.Text = resultado.ToString();
         }
 
         private void btnReferencia_Click(object sender, EventArgs e)
