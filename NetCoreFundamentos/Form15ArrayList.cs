@@ -14,6 +14,21 @@ namespace NetCoreFundamentos
         public Form15ArrayList()
         {
             InitializeComponent();
+
+            //CREAMOS UNA COLECCION GENERICA
+            List<Control> botones = new List<Control>();
+            //DETECTA AUTOMATICAMENTE LOS ELEMENTOS
+            botones.Add(this.button1);
+            botones.Add(this.button2);
+            botones.Add(this.button3);
+            botones.Add(this.textBox1);
+
+
+
+
+
+
+
             //VAMOS A CREAR UNA COLECCION NO TIPADA
             ArrayList coleccion = new ArrayList();
             coleccion.Add(this.button1);
@@ -42,6 +57,18 @@ namespace NetCoreFundamentos
                     ((TextBox)boton).Paste();
                 }
             }
+
+            this.button1.Click += MetodoDelegado;
+
+        }
+
+        private void Button1_Click(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        void MetodoDelegado(object sender, EventArgs e)
+        {
 
         }
     }
