@@ -34,6 +34,11 @@
             btnValor = new Button();
             btnDobleReferencia = new Button();
             btnReferencia = new Button();
+            lblRaton = new Label();
+            label2 = new Label();
+            txtSoloNumeros = new TextBox();
+            label3 = new Label();
+            txtSoloLetras = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -62,7 +67,7 @@
             // 
             // btnValor
             // 
-            btnValor.Location = new Point(217, 47);
+            btnValor.Location = new Point(23, 277);
             btnValor.Name = "btnValor";
             btnValor.Size = new Size(117, 61);
             btnValor.TabIndex = 3;
@@ -72,7 +77,7 @@
             // 
             // btnDobleReferencia
             // 
-            btnDobleReferencia.Location = new Point(217, 123);
+            btnDobleReferencia.Location = new Point(23, 353);
             btnDobleReferencia.Name = "btnDobleReferencia";
             btnDobleReferencia.Size = new Size(117, 61);
             btnDobleReferencia.TabIndex = 4;
@@ -82,7 +87,7 @@
             // 
             // btnReferencia
             // 
-            btnReferencia.Location = new Point(217, 201);
+            btnReferencia.Location = new Point(23, 431);
             btnReferencia.Name = "btnReferencia";
             btnReferencia.Size = new Size(117, 61);
             btnReferencia.TabIndex = 5;
@@ -90,11 +95,61 @@
             btnReferencia.UseVisualStyleBackColor = true;
             btnReferencia.Click += btnReferencia_Click;
             // 
+            // lblRaton
+            // 
+            lblRaton.BackColor = SystemColors.ActiveCaption;
+            lblRaton.Location = new Point(233, 277);
+            lblRaton.Name = "lblRaton";
+            lblRaton.Size = new Size(390, 215);
+            lblRaton.TabIndex = 6;
+            lblRaton.Text = "label2";
+            lblRaton.TextAlign = ContentAlignment.MiddleCenter;
+            lblRaton.MouseMove += lblRaton_MouseMove;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(229, 50);
+            label2.Name = "label2";
+            label2.Size = new Size(80, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Solo números";
+            // 
+            // txtSoloNumeros
+            // 
+            txtSoloNumeros.Location = new Point(326, 47);
+            txtSoloNumeros.Name = "txtSoloNumeros";
+            txtSoloNumeros.Size = new Size(142, 23);
+            txtSoloNumeros.TabIndex = 8;
+            txtSoloNumeros.KeyPress += txtSoloNumeros_KeyPress;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(233, 100);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 15);
+            label3.TabIndex = 9;
+            label3.Text = "Solo letras";
+            // 
+            // txtSoloLetras
+            // 
+            txtSoloLetras.Location = new Point(326, 97);
+            txtSoloLetras.Name = "txtSoloLetras";
+            txtSoloLetras.Size = new Size(142, 23);
+            txtSoloLetras.TabIndex = 10;
+            txtSoloLetras.KeyPress += txtSoloLetras_KeyPress;
+            // 
             // Form14Metodos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(390, 310);
+            ClientSize = new Size(653, 517);
+            Controls.Add(txtSoloLetras);
+            Controls.Add(label3);
+            Controls.Add(txtSoloNumeros);
+            Controls.Add(label2);
+            Controls.Add(lblRaton);
             Controls.Add(btnReferencia);
             Controls.Add(btnDobleReferencia);
             Controls.Add(btnValor);
@@ -115,5 +170,10 @@
         private Button btnValor;
         private Button btnDobleReferencia;
         private Button btnReferencia;
+        private Label lblRaton;
+        private Label label2;
+        private TextBox txtSoloNumeros;
+        private Label label3;
+        private TextBox txtSoloLetras;
     }
 }
