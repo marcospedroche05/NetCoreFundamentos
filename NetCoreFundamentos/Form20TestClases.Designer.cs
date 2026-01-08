@@ -31,6 +31,7 @@
             label1 = new Label();
             lstClases = new ListBox();
             btnCrearPersona = new Button();
+            btnCrearEmpleado = new Button();
             SuspendLayout();
             // 
             // label1
@@ -60,11 +61,22 @@
             btnCrearPersona.UseVisualStyleBackColor = true;
             btnCrearPersona.Click += btnCrearPersona_Click;
             // 
+            // btnCrearEmpleado
+            // 
+            btnCrearEmpleado.Location = new Point(203, 297);
+            btnCrearEmpleado.Name = "btnCrearEmpleado";
+            btnCrearEmpleado.Size = new Size(134, 42);
+            btnCrearEmpleado.TabIndex = 3;
+            btnCrearEmpleado.Text = "Empleado";
+            btnCrearEmpleado.UseVisualStyleBackColor = true;
+            btnCrearEmpleado.Click += btnCrearEmpleado_Click;
+            // 
             // Form20TestClases
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 408);
+            Controls.Add(btnCrearEmpleado);
             Controls.Add(btnCrearPersona);
             Controls.Add(lstClases);
             Controls.Add(label1);
@@ -79,5 +91,6 @@
         private Label label1;
         private ListBox lstClases;
         private Button btnCrearPersona;
+        private Button btnCrearEmpleado;
     }
 }
