@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using ProyectoClases.Helpers;
 
 namespace NetCoreFundamentos
 {
     public partial class Form21Files : Form
     {
         public string Path { get; set; }
+        HelperFiles helper;
 
         public Form21Files()
         {
@@ -22,6 +24,7 @@ namespace NetCoreFundamentos
             //2) UTILIZAR @ ANTES Y FUERA DEL STRING
             //this.Path = @"C:\carpeta\1.txt"
             this.Path = "file1.txt";
+            this.helper = new HelperFiles();
 
         }
 
@@ -34,33 +37,15 @@ namespace NetCoreFundamentos
 
         private async void btnLeer_Click(object sender, EventArgs e)
         {
-            FileInfo file = new FileInfo(this.Path);
-            using (TextReader reader = file.OpenText())
-            {
-                string content = await reader.ReadToEndAsync();
-                reader.Close();
-                this.txtContenido.Text = content;
-            }
+            string content = await this.helper.ReadFileAsync(this.Path);
+            this.txtContenido.Text = content;
         }
 
         private async void btnEscribir_Click(object sender, EventArgs e)
         {
-            //TENEMOS UNA CLASE LLAMADA FileInfo QUE NOS DEVUELVE UN FILE
-            //Y PODEMOS GENERAR UN WRITER/READER
-            FileInfo file = new FileInfo(this.Path);
-            //CREAMOS EL FICHERO
-            using (TextWriter writer = file.CreateText())
-            {
-                string content = this.GetNombresListBox();
-                //ESCRIBIMOS EN EL FICHERO
-                await writer.WriteAsync(content);
-                //DESPUES DE ESCRIBIR EN CUALQUIER FICHERO, DEBEMOS LIBERAR LA MEMORIA
-                //PARA HACERLO FIJO
-                await writer.FlushAsync();
-                //CERRAMOS EL FICHERO
-                writer.Close();
-                MessageBox.Show("Fichero almacenado");
-            }
+            string content = this.GetNombresListBox();
+            await this.helper.WriteFileAsync(this.Path, content);
+            MessageBox.Show("Datos almacenados");
         }
 
         public string GetNombresListBox()
