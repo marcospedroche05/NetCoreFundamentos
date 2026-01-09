@@ -40,7 +40,7 @@ namespace NetCoreFundamentos
 
         private async void btnGuardarMascotas_Click(object sender, EventArgs e)
         {
-            using(StreamWriter writer = new StreamWriter("listamascotas.xml"))
+            using (StreamWriter writer = new StreamWriter("listamascotas.xml"))
             {
                 this.serializer.Serialize(writer, this.mascotasList);
                 await writer.FlushAsync();
@@ -58,6 +58,16 @@ namespace NetCoreFundamentos
                 reader.Close();
                 this.DibujarMascotas();
             }
+        }
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        {
+            //ABRIR EL OPENFILA PARA SELECCIONAR LA IMAGEN
+            this.openFileDialog1.ShowDialog();
+            //RECUPERAMOS LA RUTA DE LA IMAGEN
+            string path = this.openFileDialog1.FileName;
+            //DIBUJAMOS LA IMAGEN
+            this.pictureBox1.Image = Image.FromFile(path);
         }
     }
 }

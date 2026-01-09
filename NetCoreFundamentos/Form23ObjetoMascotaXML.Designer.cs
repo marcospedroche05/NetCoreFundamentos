@@ -36,6 +36,10 @@
             txtEdad = new TextBox();
             btnLeer = new Button();
             btnGuardar = new Button();
+            btnExaminar = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -106,11 +110,36 @@
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
             // 
+            // btnExaminar
+            // 
+            btnExaminar.Location = new Point(284, 211);
+            btnExaminar.Name = "btnExaminar";
+            btnExaminar.Size = new Size(87, 36);
+            btnExaminar.TabIndex = 8;
+            btnExaminar.Text = "Examinar...";
+            btnExaminar.UseVisualStyleBackColor = true;
+            btnExaminar.Click += btnExaminar_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(429, 58);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(278, 270);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
             // Form23ObjetoMascotaXML
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(444, 366);
+            ClientSize = new Size(751, 366);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnExaminar);
             Controls.Add(btnGuardar);
             Controls.Add(btnLeer);
             Controls.Add(txtEdad);
@@ -121,6 +150,7 @@
             Controls.Add(label1);
             Name = "Form23ObjetoMascotaXML";
             Text = "Form23ObjetoMascotaXML";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -135,5 +165,8 @@
         private TextBox txtEdad;
         private Button btnLeer;
         private Button btnGuardar;
+        private Button btnExaminar;
+        private OpenFileDialog openFileDialog1;
+        private PictureBox pictureBox1;
     }
 }

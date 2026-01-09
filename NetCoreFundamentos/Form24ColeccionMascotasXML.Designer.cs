@@ -39,6 +39,10 @@
             btnLeerMascotas = new Button();
             btnGuardarMascotas = new Button();
             btnNuevaMascota = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            pictureBox1 = new PictureBox();
+            btnExaminar = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtEdad
@@ -136,11 +140,36 @@
             btnNuevaMascota.UseVisualStyleBackColor = true;
             btnNuevaMascota.Click += btnNuevaMascota_Click;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(659, 63);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(237, 288);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
+            // 
+            // btnExaminar
+            // 
+            btnExaminar.Location = new Point(473, 182);
+            btnExaminar.Name = "btnExaminar";
+            btnExaminar.Size = new Size(127, 38);
+            btnExaminar.TabIndex = 18;
+            btnExaminar.Text = "Examinar";
+            btnExaminar.UseVisualStyleBackColor = true;
+            btnExaminar.Click += btnExaminar_Click;
+            // 
             // Form24ColeccionMascotasXML
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(646, 396);
+            ClientSize = new Size(952, 396);
+            Controls.Add(btnExaminar);
+            Controls.Add(pictureBox1);
             Controls.Add(btnNuevaMascota);
             Controls.Add(btnGuardarMascotas);
             Controls.Add(btnLeerMascotas);
@@ -154,6 +183,7 @@
             Controls.Add(label1);
             Name = "Form24ColeccionMascotasXML";
             Text = "Form24ColeccionMascotasXML";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,5 +201,8 @@
         private Button btnLeerMascotas;
         private Button btnGuardarMascotas;
         private Button btnNuevaMascota;
+        private OpenFileDialog openFileDialog1;
+        private PictureBox pictureBox1;
+        private Button btnExaminar;
     }
 }

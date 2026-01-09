@@ -9,6 +9,7 @@ namespace ProyectoClases.Models
         public string Nombre { get; set; }
         public string Raza { get; set; }
         public int Edad { get; set; }
+        public byte[] imagen { get; set; }
         public Mascota() {}
         public Mascota(string nombre, string raza, int edad)
         {
